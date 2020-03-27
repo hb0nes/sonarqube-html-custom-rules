@@ -1,0 +1,33 @@
+{
+  "name": "Sonar way",
+  "ruleKeys": [
+    "AvoidCommentedOutCodeCheck",
+    "BoldAndItalicTagsCheck",
+    "DoctypePresenceCheck",
+    "FieldsetWithoutLegendCheck",
+    "FlashUsesBothObjectAndEmbedCheck",
+    "FrameWithoutTitleCheck",
+    "ImgWithoutAltCheck",
+    "ItemTagNotWithinContainerTagCheck",
+    "LinkToImageCheck",
+    "MetaRefreshCheck",
+    "PageWithoutTitleCheck",
+    "S1134",
+    "S1135",
+    "S1827",
+    "S4084",
+    "S4645",
+    "S5148",
+    "S5254",
+    "S5255",
+    "S5256",
+    "S5257",
+    "S5258",
+    "S5260",
+    "S5264",
+    "ServerSideImageMapsCheck",
+    "TableHeaderHasIdOrScopeCheck",
+    "TableWithoutCaptionCheck",
+    "UnsupportedTagsInHtml5Check"
+  ]
+}
