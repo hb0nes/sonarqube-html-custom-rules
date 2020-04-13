@@ -1,0 +1,16 @@
+{
+  "title": "Laravel CSRF annotation",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "security"
+  ],
+  "defaultSeverity": "Major",
+  "ruleSpecification": "RSPEC-2133",
+  "sqKey": "MissingCSRFAnnotationCheck",
+  "scope": "All"
+}
