@@ -1,0 +1,16 @@
+{
+  "title": "ASP.NET Razor arbitrary code execution",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "security"
+  ],
+  "defaultSeverity": "Major",
+  "ruleSpecification": "",
+  "sqKey": "ArbitraryCodeExecutionRazorCheck",
+  "scope": "All"
+}

@@ -84,7 +84,10 @@ import org.sonar.plugins.html.checks.whitespace.WhiteSpaceAroundCheck;
 public final class CheckClasses {
 
   private static final List<Class> CLASSES = Arrays.asList(
-          UnsafeBladeExpressionCheck.class,
+    UnsafeBladeExpressionCheck.class,
+    RawHtmlRazorCheck.class,
+    SystemIoRazorCheck.class,
+    ArbitraryCodeExecutionRazorCheck.class,
     AbsoluteURICheck.class,
     AvoidHtmlCommentCheck.class,
     ChildElementRequiredCheck.class,

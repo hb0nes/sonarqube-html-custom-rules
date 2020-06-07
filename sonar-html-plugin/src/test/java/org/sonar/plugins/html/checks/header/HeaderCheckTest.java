@@ -81,7 +81,7 @@ public class HeaderCheckTest {
 
     HtmlSourceCode sourceCode = TestHelper.scan(new File("src/test/resources/checks/HeaderCheck/Regex1.html"), check);
 
-    checkMessagesVerifier.verify(sourceCode.getIssues()).noMore();
+    checkMessagesVerifier.verify(sourceCode.getIssues()).next();
   }
 
   @Test

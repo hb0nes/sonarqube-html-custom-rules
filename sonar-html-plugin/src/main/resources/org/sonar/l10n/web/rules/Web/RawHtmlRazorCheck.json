@@ -1,0 +1,16 @@
+{
+  "title": "ASP.NET Razor raw html",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "5min"
+  },
+  "tags": [
+    "security"
+  ],
+  "defaultSeverity": "Major",
+  "ruleSpecification": "RSPEC-125",
+  "sqKey": "RawHtmlRazorCheck",
+  "scope": "All"
+}
