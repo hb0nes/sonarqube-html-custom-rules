@@ -19,6 +19,7 @@ package org.sonar.plugins.html.rules;
 
 import java.util.Arrays;
 import java.util.List;
+
 import org.sonar.plugins.html.checks.attributes.IllegalAttributeCheck;
 import org.sonar.plugins.html.checks.attributes.RequiredAttributeCheck;
 import org.sonar.plugins.html.checks.coding.ComplexityCheck;
@@ -83,86 +84,87 @@ import org.sonar.plugins.html.checks.whitespace.WhiteSpaceAroundCheck;
 
 public final class CheckClasses {
 
-  private static final List<Class> CLASSES = Arrays.asList(
-    UnsafeBladeExpressionCheck.class,
-    RawHtmlRazorCheck.class,
-    SystemIoRazorCheck.class,
-    ArbitraryCodeExecutionRazorCheck.class,
-    AbsoluteURICheck.class,
-    AvoidHtmlCommentCheck.class,
-    ChildElementRequiredCheck.class,
-    ComplexityCheck.class,
-    DeprecatedAttributesInHtml5Check.class,
-    DoubleQuotesCheck.class,
-    DynamicJspIncludeCheck.class,
-    FileLengthCheck.class,
-    IllegalElementCheck.class,
-    IllegalTabCheck.class,
-    IllegalTagLibsCheck.class,
-    InlineStyleCheck.class,
-    InternationalizationCheck.class,
-    JspScriptletCheck.class,
-    LibraryDependencyCheck.class,
-    LongJavaScriptCheck.class,
-    NestedJavaScriptCheck.class,
-    MaxLineLengthCheck.class,
-    ParentElementIllegalCheck.class,
-    ParentElementRequiredCheck.class,
-    UnclosedTagCheck.class,
-    UnifiedExpressionCheck.class,
-    WhiteSpaceAroundCheck.class,
-    ChildElementIllegalCheck.class,
-    HeaderCheck.class,
-    IllegalAttributeCheck.class,
-    IllegalNamespaceCheck.class,
-    MultiplePageDirectivesCheck.class,
-    RequiredAttributeCheck.class,
-    AvoidCommentedOutCodeCheck.class,
-    ImgWithoutAltCheck.class,
-    UnsupportedTagsInHtml5Check.class,
-    NonConsecutiveHeadingCheck.class,
-    MetaRefreshCheck.class,
-    LinkToImageCheck.class,
-    LinkToNothingCheck.class,
-    LinkWithTargetBlankCheck.class,
-    ServerSideImageMapsCheck.class,
-    FrameWithoutTitleCheck.class,
-    BoldAndItalicTagsCheck.class,
-    MouseEventWithoutKeyboardEquivalentCheck.class,
-    PageWithoutTitleCheck.class,
-    VideoTrackCheck.class,
-    ItemTagNotWithinContainerTagCheck.class,
-    FieldsetWithoutLegendCheck.class,
-    WmodeIsWindowCheck.class,
-    TableWithoutCaptionCheck.class,
-    LinksIdenticalTextsDifferentTargetsCheck.class,
-    FlashUsesBothObjectAndEmbedCheck.class,
-    DoctypePresenceCheck.class,
-    TableHeaderHasIdOrScopeCheck.class,
-    InputWithoutLabelCheck.class,
-    ImgWithoutWidthOrHeightCheck.class,
-    PageWithoutFaviconCheck.class,
-    TodoCommentCheck.class,
-    FixmeCommentCheck.class,
-    ElementWithGivenIdPresentCheck.class,
-    LayoutTableCheck.class,
-    LayoutTableWithSemanticMarkupCheck.class,
-    TableWithoutHeaderCheck.class,
-    LangAttributeCheck.class,
-    ObjectWithAlternativeContentCheck.class,
-    IndistinguishableSimilarElementsCheck.class,
-    TableHeaderReferenceCheck.class
-  );
+    private static final List<Class> CLASSES = Arrays.asList(
+         MissingCSRFAnnotationCheck.class,
+         UnsafeBladeExpressionCheck.class,
+         RawHtmlRazorCheck.class,
+         SystemIoRazorCheck.class,
+         ArbitraryCodeExecutionRazorCheck.class,
+         AbsoluteURICheck.class,
+         AvoidHtmlCommentCheck.class,
+         ChildElementRequiredCheck.class,
+         ComplexityCheck.class,
+         DeprecatedAttributesInHtml5Check.class,
+         DoubleQuotesCheck.class,
+         DynamicJspIncludeCheck.class,
+         FileLengthCheck.class,
+         IllegalElementCheck.class,
+         IllegalTabCheck.class,
+         IllegalTagLibsCheck.class,
+         InlineStyleCheck.class,
+         InternationalizationCheck.class,
+         JspScriptletCheck.class,
+         LibraryDependencyCheck.class,
+         LongJavaScriptCheck.class,
+         NestedJavaScriptCheck.class,
+         MaxLineLengthCheck.class,
+         ParentElementIllegalCheck.class,
+         ParentElementRequiredCheck.class,
+         UnclosedTagCheck.class,
+         UnifiedExpressionCheck.class,
+         WhiteSpaceAroundCheck.class,
+         ChildElementIllegalCheck.class,
+         HeaderCheck.class,
+         IllegalAttributeCheck.class,
+         IllegalNamespaceCheck.class,
+         MultiplePageDirectivesCheck.class,
+         RequiredAttributeCheck.class,
+         AvoidCommentedOutCodeCheck.class,
+         ImgWithoutAltCheck.class,
+         UnsupportedTagsInHtml5Check.class,
+         NonConsecutiveHeadingCheck.class,
+         MetaRefreshCheck.class,
+         LinkToImageCheck.class,
+         LinkToNothingCheck.class,
+         LinkWithTargetBlankCheck.class,
+         ServerSideImageMapsCheck.class,
+         FrameWithoutTitleCheck.class,
+         BoldAndItalicTagsCheck.class,
+         MouseEventWithoutKeyboardEquivalentCheck.class,
+         PageWithoutTitleCheck.class,
+         VideoTrackCheck.class,
+         ItemTagNotWithinContainerTagCheck.class,
+         FieldsetWithoutLegendCheck.class,
+         WmodeIsWindowCheck.class,
+         TableWithoutCaptionCheck.class,
+         LinksIdenticalTextsDifferentTargetsCheck.class,
+         FlashUsesBothObjectAndEmbedCheck.class,
+         DoctypePresenceCheck.class,
+         TableHeaderHasIdOrScopeCheck.class,
+         InputWithoutLabelCheck.class,
+         ImgWithoutWidthOrHeightCheck.class,
+         PageWithoutFaviconCheck.class,
+         TodoCommentCheck.class,
+         FixmeCommentCheck.class,
+         ElementWithGivenIdPresentCheck.class,
+         LayoutTableCheck.class,
+         LayoutTableWithSemanticMarkupCheck.class,
+         TableWithoutHeaderCheck.class,
+         LangAttributeCheck.class,
+         ObjectWithAlternativeContentCheck.class,
+         IndistinguishableSimilarElementsCheck.class,
+         TableHeaderReferenceCheck.class
+    );
 
-  private CheckClasses() {
-  }
+    private CheckClasses() {
+    }
 
-  /**
-   * Gets the list of XML checks.
-   */
-  @SuppressWarnings("rawtypes")
-  public static List<Class> getCheckClasses() {
-    return CLASSES;
-  }
+    /**
+     * Gets the list of XML checks.
+     */
+    @SuppressWarnings("rawtypes")
+    public static List<Class> getCheckClasses() {
+        return CLASSES;
+    }
 
 }

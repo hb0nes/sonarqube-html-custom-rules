@@ -1,0 +1,18 @@
+<html>
+<body>
+<form method="POST" action="/protected">
+    @csrf
+    <input type="text" id="varken" name="varken">
+</form>
+<form method="POST" action="/unprotected">
+    <input type="text" id="aap" name="aap">
+</form>
+<form method="POST" action="/protected2">
+    @csrf
+    <input type="text" id="robert" name="herman">
+</form>
+<form method="POST" action="/unprotected2">
+    <input type="text" id="herbert" name="roman">
+</form>
+</body>
+</html>
